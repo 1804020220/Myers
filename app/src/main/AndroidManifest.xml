@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- @qiuliangqing 必须 -->
+    <queries>
+        <package android:name="com.android.launcher3" />
+        <package android:name="com.android.deskclock" />
+    </queries>
+
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+
+    <!-- @qiuliangqing 静默安装shortcut需要此权限 -->
+    <uses-permission android:name="obric.permission.LAUNCHER_SHORTCUT" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <!-- @qiuliangqing 删改查shortcut需要此二权限 -->
+    <uses-permission android:name="com.android.launcher3.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher3.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="os.permission.GET_CLOCK_PROVIDER"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TestShortCut"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+
+        </activity>
+    </application>
+
+</manifest>

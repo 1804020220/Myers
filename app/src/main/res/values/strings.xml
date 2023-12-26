@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TestShortCut</string>
+    <string name="shortcut_label">TestLabel</string>
+    <string name="shortcut_label_long">TestLongLabel</string>
+    <string name="shortcut_disabled_message">Disable message</string>
+
+</resources>

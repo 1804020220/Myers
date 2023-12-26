@@ -1,0 +1,19 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="shortcut1"
+        android:enabled="true"
+        android:icon="@drawable/img"
+        android:shortcutShortLabel="@string/shortcut_label"
+        android:shortcutLongLabel="@string/shortcut_label_long"
+        android:shortcutDisabledMessage="@string/shortcut_disabled_message">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.example.myers"
+            android:targetClass="com.example.myers.MainActivity" />
+
+        <!-- 可选：指定额外的 Intent 过滤器 -->
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <!-- 定义更多的静态快捷方式 -->
+</shortcuts>
